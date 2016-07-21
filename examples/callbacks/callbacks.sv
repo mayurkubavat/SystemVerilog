@@ -52,9 +52,13 @@ module test;
 
     initial
     begin
-        Driver drv_h = new();
-        test t_h = new();
 
+        Driver drv_h = new();
+
+        //
+        //To achieve callback
+        //
+        test t_h = new();
         drv_h.drv_cb_h = t_h;
 
         drv_h.run();
